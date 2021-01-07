@@ -19,23 +19,10 @@ public class MovieEntity {
 	@Property("released")
 	private Integer yearOfRelease;
 
-	@Version
-	private Long version;
-
-	public MovieEntity() {}
-
 	public MovieEntity(String title, String tagline, Integer yearOfRelease) {
 		this.title = title;
 		this.tagline = Tagline.of(tagline);
 		this.yearOfRelease = yearOfRelease;
-	}
-
-	public Long getVersion() {
-		return version;
-	}
-
-	public void setVersion(Long version) {
-		this.version = version;
 	}
 
 	public String getTitle() {
